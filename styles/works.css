@@ -1,0 +1,163 @@
+.work_title{
+    padding: 60px 0;
+}
+.works_wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--third-color);
+    margin-bottom: 10.5vh;
+    position: relative;
+    transition: all 1.25s ease;
+    width: 30%;
+}
+
+.project_wrapper{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px; 
+    box-shadow: 0 3px 7px 1px var(--shadow-color);
+    height: 100%;
+    padding: 10px 20px 50px 20px;
+    width: fit-content;
+    text-align: center;
+}
+.project_wrapper h3{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+.project_wrapper img{
+    width: 60%;
+    height: auto;
+    padding: 10px;
+}
+
+.project_wrapper p{
+    height: 72px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.project input{
+    display: none;
+}
+
+.label_project{
+    padding: 20px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+}
+
+.label_project > span, 
+.label_project > span::after,
+.label_project > span::before{
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.label_project > span::after{
+    content: '';
+    left: 15px;
+}
+.label_project > span::before{
+    content: '';
+    left: -15px;
+}
+.label_project > span:hover, 
+.label_project > span:hover::after,
+.label_project > span:hover::before{
+    background-color: var(--main-color-hover);
+}
+input[type="checkbox"]:checked:checked ~ .label_project{
+    top: 10px;
+    right: 45px;
+}
+input[type="checkbox"]:checked:checked ~ .label_project> span,
+input[type="checkbox"]:checked:checked ~ .label_project> span::after{
+    height: 5px;
+    width: 40px;
+    background-color: var(--second-color);
+}
+input[type="checkbox"]:checked:checked ~ .label_project> span{
+    transform: rotate(45deg);
+}
+input[type="checkbox"]:checked:checked ~ .label_project > span::before{
+    height: 0px;
+    left: 0;
+    transform: rotate(0);
+    background-color: var(--second-color);
+}
+input[type="checkbox"]:checked:checked ~ .label_project> span::after{
+    left: 0;
+    transform: rotate(90deg);
+}
+
+input[type="checkbox"]:checked ~ .project_wrapper div img {
+    width: 70%;
+    float: left;
+}
+input[type="checkbox"]:checked ~ .project_wrapper h3{
+    width: 80%;
+}
+input[type="checkbox"]:checked ~ .project_wrapper div{
+    height: 100%;
+}
+input[type="checkbox"]:checked ~ .project_wrapper div p{
+    height: max-content;
+    overflow: visible;
+}
+input[type="checkbox"]:checked ~ .project_wrapper{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 5px 10px 5px var(--shadow-color);
+    padding: 10px 20px 30px 10px;
+}
+
+@media(max-width:1024px){
+    .project{
+        width: 45%;
+    }
+}
+@media(max-width:768px){
+    .project{
+        width: 100%;
+    }
+    .project_wrapper{
+        padding: 10px 10px 40px;
+    }
+    .project_wrapper p{
+        height: 66px;
+    }
+    input[type="checkbox"]:checked ~ .project_wrapper div img {
+        width: calc(100% - 20px);
+    }
+    input[type="checkbox"]:checked:checked ~ .label_project{
+        top: 10px;
+        right: 10px;
+    }
+}
+@media(max-width:500px){
+    input[type="checkbox"]:checked:checked ~ .label_project> span,
+    input[type="checkbox"]:checked:checked ~ .label_project> span::after{
+        height: 3px;
+        width: 25px;
+    }
+}

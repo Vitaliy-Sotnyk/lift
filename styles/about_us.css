@@ -1,0 +1,47 @@
+.about_us{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 95vh;
+    padding-top: 5vh;
+}
+.about_us h3{
+    margin: 30px 0;
+}
+.what_we_can, .what_we_do{
+    margin-left: 10px;
+    text-indent: 40px;
+}
+.what_we_can li:not(:first-child), 
+.what_we_can li:not(:last-child){
+    margin: 10px 0;
+}
+.what_we_can li::before {
+        content: '\2611'; 
+        color: var(--second-color);
+}
+
+@media(max-width: 1024px){
+    .about_us{
+        height: auto;
+    }
+    .what_we_can, .what_we_do{
+        margin: 0;
+        text-indent: 10px;
+    }
+    .about_us h3{
+        margin: 10px 0;
+    }
+}
+@media(max-width: 786px){
+    .about_us{
+        height: auto;
+        max-height: 1500px;
+        padding-top: 0;
+    }
+    .about_us h3{
+        font-size: 18px;
+        line-height: 22px;  
+    }
+}

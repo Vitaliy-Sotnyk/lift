@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="./image/logo/icon.ico" type="x-icon">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    
+    <title>ЛЬВІВ-ЕКО</title>
+  </head>
+  <body>
+    <!--Header--> 
+    <header class="header_wrapper" id="header_wrapper">
+      <div class="navbar">
+        <div class="logo" id="logo_wrapper">
+          <a href="#header_wrapper">
+            <img src="./image/logo/logo_lighter.png" alt="logo" id="logo">
+          </a>
+        </div>
+        <div class="social_media">
+          <div class="facebook">
+            <a href="https://www.facebook.com/people/%D0%9B%D1%96%D1%84%D1%82-%D0%95%D0%BA%D0%BE/100063128768952/" id="facebook">
+              <img src="./image/social_media/Facebook.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
+        <nav class="menu_wrapper">
+          <input type="checkbox" id="hamburder_checkbox">
+          <label class="menu_hamburger"  id="menu_hamburger" for="hamburder_checkbox">
+            <span></span>
+          </label>
+          <ul class="menu" id="menu">
+            <li>
+              <a href="#header_wrapper" onclick="closeMenu()">Головна</a>
+            </li>
+            <li>
+              <a href="#our_works" onclick="closeMenu()">Наші Роботи</a>
+            </li>
+            <li>
+              <a href="#our_portfolio" onclick="closeMenu()">Портфоліо</a>
+            </li>
+            <li>
+              <a href="#our_partners" onclick="closeMenu()">Партнери</a>
+            </li>
+            <li>
+              <a href="#about_us" onclick="closeMenu()">Про Нас</a>
+            </li>
+            <li>
+              <a href="#contact_us" onclick="closeMenu()">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slider_wrapper">
+        <div class="header_slider" id="header_slider">
+          <div class="header_item" >
+            <img src="./image/1.png" alt="">
+            <h2>Співпраця з нами – це впевненість у виконанні обумовлених зобов’язань.</h2>
+          </div>
+          <div class="header_item">
+            <img src="./image/2.png" alt="">
+            <h2>ТОВ «Ліфт-Еко» засноване у 2001 році. За період своєї діяльності підприємство зарекомендувало себе як надійного партнера, що виконує роботи швидко та якісно. </h2>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <span class="slider-dots_item" onclick="currentSlide(1)"></span> 
+          <span class="slider-dots_item" onclick="currentSlide(2)"></span> 
+        </div>
+      </div>
+    </header>
+
+    <!--Our Works-->
+    <section class="our_works" id="our_works">
+      <div class="work_title" id="work_title">
+        <h2>Наші роботи</h2>
+      </div>
+      <div class="works_wrapper" id="works_wrapper">
+        <div class="project" id="project_one_block">
+            <input type="checkbox" name="project_checkbox" id="project_one">
+            <div class="project_wrapper one">
+              <h3 id="title_project_one">Зовнішній ліфт на вул. Генерала Т. Чупринки, 43</h3>        
+              <div class="description_project one">
+                <img src="./image/portfolio/project_1_img.jpg" alt="img_project-one">
+                <p id="description_project_one">
+                  У поліклініці на вулиці Чупринки, 43 у Львові встановили зовнішній ліфт. Фото опублікувала ГО «Зручне місто».
+
+                  Рішення про облаштування ліфту виконавчий комітет Львова ухвалив 16 квітня. 
+                  Йдеться про будівлю поліклінічного відділення № 1, що на вул. Генерала Т. Чупринки, 43. 
+                  Ліфт розташований ззовні полікілінки з боку вул. Івана Левинського.
+                  На всі роботи скерували 6 мільйонів гривень.
+                  Раніше на 4 чи 5 поверх хворих у медзакладі носили сходами на ношах. 
+                  Через проблеми із інклюзивністтю у мед закладу також могли виникнути й проблеми із фінансуванням, бо якщо медзаклад не відповідає вимогам НСЗУ, 
+                  то структура не підписуватиме угоди на державне фінансування тих чи інших напрямків медичної роботи на 2021 рік з лікарнею.
+                </p>
+              </div>
+            </div>
+            <label class="label_project" for="project_one">
+              <span></span>
+            </label>
+        </div>
+        <div class="project" id="project_two_block">
+          <input type="checkbox" name="project_checkbox" id="project_two">
+          <div class="project_wrapper two">
+            <h3 id="title_project_two"> Вул. Морозна 19а</h3>        
+            <div class="description_project two">
+              <img src="./image/portfolio/project_2_img.jpg" alt="img_project-two">
+              <p id="description_project_two">
+                В будинку по вул. Морозна 19а було проведено ремонтні роботи 1-го поверху сходової клітки та заміна ліфта нашою компанією.
+              </p>
+            </div>
+          </div>
+          <label class="label_project" for="project_two">
+            <span></span>
+          </label>
+        </div>
+        <div class="project" id="project_three_block">
+          <input type="checkbox"name="project_checkbox" id="project_three">
+          <div class="project_wrapper three">
+            <h3 id="title_project_three"> Ліфт для Госпіталя Ветеранів війни</h3>        
+            <div class="description_project three">
+              <img src="./image/portfolio/project_3_img.jpg" alt="img_project-three">
+              <p id="description_project_three">
+                Завершено встановлення ліфта у Львівському Обласному Госпіталі Ветеранів війни у Винниках
+              </p>
+            </div>
+          </div>
+          <label class="label_project" for="project_three">
+            <span></span>
+          </label>
+        </div>
+        <div class="project" id="project_four_block">
+          <input type="checkbox" name="project_checkbox" id="project_four">
+          <div class="project_wrapper four">
+            <h3 id="title_project_four"> Пр.Червоної Калини 39, 2 </h3>        
+            <div class="description_project four">
+              <img src="./image/portfolio/project_4_img.jpg" alt="img_project-four">
+              <p id="description_project_four">
+                Ось цим сучасним ліфтом, вже більше року користуються мешканці панельного будинку по пр.Червоної Калини 39, 2 під’їзд.
+                Заміна ліфта відбулася по Програмі співфінансування для ОСББ та співвласників багатоквартирних будинків Львівською міською радою.
+                Згідно даної програми, місто компенсовує 90% вартості ліфта.
+              </p>
+            </div>
+          </div>
+          <label class="label_project" for="project_four">
+            <span></span>
+          </label>
+      </div>
+      <div class="project" id="project_five_block">
+        <input type="checkbox" name="project_checkbox" id="project_five">
+        <div class="project_wrapper five">
+          <h3 id="title_project_five"> Проекти в Сихівському районі у 2020 році.</h3>        
+          <div class="description_project five">
+            <img src="./image/portfolio/project_5_img.jpg" alt="img_project-five">
+            <p id="description_project_five">
+              Завершуємо капітальні ремонти ліфтів за співфінансування мешканців та міського бюджету.
+            </p>
+          </div>
+        </div>
+        <label class="label_project" for="project_five">
+          <span></span>
+        </label>
+      </div>
+      <div class="project" id="project_six_block">
+        <input type="checkbox"name="project_checkbox" id="project_six">
+        <div class="project_wrapper six">
+          <h3 id="title_project_six">Капітальний ремонт для «Тичини-15»</h3>        
+          <div class="description_project six">
+            <img src="./image/portfolio/project_6_img.jpg" alt="img_project-six">
+            <p id="description_project_six">
+              Даний ліфт було встановлено в ОСББ «Тичини-15». 
+              Відбувався капітальний ремонт по співфінансуванні 90/10 ОСББ+ЛМР. 
+              Було проведено колосальну кількість робіт, а саме демонтаж всіх відпрацьованих та старих елементів, 
+              розширення шахти кабіни, монтаж нового устаткування, заміна повністю всіх деталей, електропроводки, тощо.
+              Старий ліфт відпрацював 40 років і перетнув практично подвійний термін експлуатації. 
+            </p>
+          </div>
+        </div>
+        <label class="label_project" for="project_six">
+          <span></span>
+        </label>
+      </div>
+      <div class="project" id="project_seven_block">
+        <input type="checkbox"name="project_checkbox" id="project_seven">
+        <div class="project_wrapper seven">
+          <h3 id="title_project_seven">Відповідь на часте питання:</h3>        
+          <div class="description_project seven">
+            <img src="./image/portfolio/project_7_img.jpg" alt="img_project-seven">
+            <p id="description_project_seven">
+              «Якими можуть бути варіанти модернізації/заміни ліфта?»
+              Стандартні шахти мають розміри 1550х1700 мм
+              Для такого типу шахт є два варіанти модернізації/заміни ліфтів:
+               + Без заміни напрямних. Кабіна матиме розмір 900х1050 мм, двері шириною 700 мм.
+               + Повна заміна з розширенням дверних отворів та збільшенням кабіни. 
+               Кабіна буде мати розмір 1000х1250 мм, двері шириною 800 мм. Даний тип ліфта задовільняє мінімальні вимоги для неповносправних.
+              Більшість обирає другий варіант, оскільки він полегшує життя не лише інвалідам, але і мамам з колясочними дітьми,
+               при перевезенні холодильників, меблів і т.д. 
+              Для замовників ми пропонуємо:
+               + вчасність виконання договірних відносин; 
+               + індивідуальні графіки платежів.
+            </p>
+          </div>
+        </div>
+        <label class="label_project" for="project_seven">
+          <span></span>
+        </label>
+      </div>
+      <div class="project" id="project_eight_block">
+        <input type="checkbox"name="project_checkbox" id="project_eight">
+        <div class="project_wrapper eight">
+          <h3 id="title_project_eight">Модернізація чи повна заміна</h3>        
+          <div class="description_project eight">
+            <img src="./image/portfolio/project_8_img.jpg" alt="img_project-eight">
+            <p id="description_project_eight">
+              За яких умов проводиться модернізація чи повна заміна ліфта у багатоквартирному будинку?
+              Згідно ухвали 4821 ЛМР від 04.04.2019 року !
+              Про заміну , модернізацію, капітальний ремонт та диспетчеризацію ліфтів у багатоквартирних будинках.
+              Після 25 років експлуатації ,роботи поточного характеру проводяться – 90 % за кошти міського бюджету 
+              м. Львова, 10 % – за кошти співвласників будинку.
+              Для участі в програмі уповноважена особа (голова ОСББ) подає заявку та кошторис на очікувану вартість 
+              робіт до департаменту ЖКГ чи райадміністрації.
+              Міська рада визначає частку, яку має заплатити ОСББ, після чого ОСББ проводить збори, на яких визначає, 
+              чи погоджуватися на ці умови, що фіксується у протоколі зібрання. Для укладення договору про співпрацю між ОСББ та містом 
+              голова об’єднання також має подати документи, що підтверджують наявність в ОСББ необхідної суми грошей.
+            </p>
+          </div>
+        </div>
+          <label class="label_project" for="project_eight">
+            <span></span>
+          </label>
+      </div>
+     </div>
+    </section>
+    
+    <!--Our Portfolio-->
+    <section class="our_portfolio" id="our_portfolio">
+      <div class="our_portfolio_title" id="our_portfolio_title">
+        <h2>Портфоліо</h2>
+      </div>
+      <div class="portfolio_slider" id="portfolio_slider">
+         <div class="portfolio_track" id="portfolio_track">
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_1_img.jpg" alt="#" onclick="groweImage(1)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_1_img_2.jpg" alt="#" onclick="groweImage(2)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_2_img.jpg" alt="#" onclick="groweImage(3)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_2_img_2.jpg" alt="#" onclick="groweImage(4)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_2_img_3.jpg" alt="#" onclick="groweImage(5)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_2_img_4.jpg" alt="#" onclick="groweImage(6)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_3_img.jpg" alt="#" onclick="groweImage(7)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_3_img_2.jpg" alt="#" onclick="groweImage(8)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_4_img.jpg" alt="#" onclick="groweImage(9)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_4_img_2.jpg" alt="#" onclick="groweImage(10)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_4_img_3.jpg" alt="#" onclick="groweImage(11)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_5_img.jpg" alt="#" onclick="groweImage(12)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_5_img_2.jpg" alt="#" onclick="groweImage(13)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_5_img_3.jpg" alt="#" onclick="groweImage(14)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_5_img_4.jpg" alt="#" onclick="groweImage(15)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_5_img_5.jpg" alt="#" onclick="groweImage(16)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_6_img.jpg" alt="#" onclick="groweImage(17)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_6_img_2.jpg" alt="#" onclick="groweImage(18)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_6_img_3.jpg" alt="#" onclick="groweImage(19)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_7_img.jpg" alt="#" onclick="groweImage(20)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_8_img.jpg" alt="#" onclick="groweImage(21)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_8_img_2.jpg" alt="#" onclick="groweImage(22)">
+            </div>
+            <div class="portfolio_image">
+              <img src="./image/portfolio/project_8_img_3.jpg" alt="#" onclick="groweImage(23)">
+            </div>
+         </div>
+          <a class="prev" id="prev" >&#10094</a>
+          <a class="next" id="next">&#10095</a>         
+      </div>
+    </section>
+    
+
+    <!--Our Partners-->
+    <section class="our_partners" id="our_partners">
+        <div class="euroformat">
+          <a href="https://euroformat.com/">
+            <img src="./image/partners/euroformat.png" alt="">
+          </a>
+        </div>
+        <div class="wittur">
+          <a href="https://www.wittur.com/website/default.aspx">
+            <img src="./image/partners/wittur.png" alt="">
+          </a>
+        </div>
+        <div class="mesanasansor">
+          <a href="http://mesanasansor.com.tr/index.html">
+            <img src="./image/partners/mesan.png" alt="">
+          </a>
+        </div>
+        <div class="fabre">
+          <a href="https://www.fabre.com.tr/">
+            <img src="./image/partners/fabre.png" alt="">
+          </a>
+        </div>
+        <div class="sicoritaly">
+          <a href="https://www.sicoritaly.com/">
+            <img src="./image/partners/sicoritaly.png" alt="">
+          </a>
+        </div>
+        <div class="vini">
+          <a href="http://www.vini.com.tr/default.asp">
+            <img src="./image/partners/vini.png" alt="">
+          </a>
+        </div>
+        <div class="fermator">
+          <a href="https://www.fermator.com/index.aspx">
+            <img src="./image/partners/fermator.png" alt="">
+          </a>
+        </div>
+
+
+    </section>
+
+    <!--About US-->
+    <section class="about_us" id="about_us">
+        <div class="about_us_inf">
+          <h2>Про нас</h2>
+        </div>
+        <div class="what_we_can">
+          <h3>Наша компанія виконує повний комплекс робіт, пов’язаних із встановленням підйомно-транспортних механізмів:</h3>
+          <ol>
+            <li>
+              попередні консультації щодо типу, розмірів та інших характеристик обладнання;
+            </li>
+            <li>
+              проектування ліфтових шахт;
+            </li>
+            <li>
+              нагляд за будівництвом шахти; 
+            </li>
+            <li>
+              постачання ліфтового обладнання; 
+            </li>
+            <li>
+              монтаж ліфтів та здача їх до експлуатації; 
+            </li>
+            <li>
+              технічне обслуговування ліфтів; 
+            </li>
+            <li>
+              гарантійний та післягарантійний ремонт ліфтів. 
+            </li>
+          </ol>
+        </div>
+        <div class="what_we_do">
+          <h3>Ми пропонуємо різноманітні типи ліфтів, серед яких Ви знайдете електричні, гідравлічні, без машинного приміщення, швидкісні, панорамні та ін.</h3>
+        </div>
+    </section>
+    
+    <!--Contact US-->
+    <section class="contact_us" id="contact_us">
+      <div class="our_contacts_wrapper">
+        <div class="our_contacts">
+          <h2>Контакти</h2>
+        </div>
+        <div class="our_phones">
+          <h3>Зателефонуйте нам</h3>
+          <p>(032)244-62-32</p>
+          <p>+380(50)516-80-29</p>
+        </div>
+        <div class="our_location">
+          <h3>Завітайте до нас</h3>
+          <p>м. Львів, вул. Сихівська, 24б</p>
+        </div>
+        <div class="our_email">
+          <h3>Напишіть нам</h3>
+          <p>lifteko.ua@gmail.com</p>
+        </div>
+      </div>
+      <div class="we_in_map" id="map">
+      </div>
+      </section>
+
+
+    <!--Footer-->
+    <footer class="footer_block" id="footer_block">
+      <div class="content_logo">
+        <div class="logo_footer_wrapper">
+            <img src="./image/logo/full_logo_2.png" alt="logo" id="logo_footer">
+            <p>монтаж та технічне обслуговування ліфтів</p>
+        </div>
+        <div class="footer_content_wrapper">
+          <h3>Дякуємо за довіру</h3>
+          <p>Раді співпрацювати з мешканцями Львова та успішно модернізувати ліфтове господарство нашого міста!</p>
+        </div>
+      </div>
+      <nav class="menu_wrapper_footer">
+        <ul class="menu_footer" id="menu_footer">
+          <li>
+            <a href="#header_wrapper">Головна</a>
+          </li>
+          <li>
+            <a href="#our_works">Наші Роботи</a>
+          </li>
+          <li>
+            <a href="#our_portfolio">Портфоліо</a>
+          </li>
+          <li>
+            <a href="#our_partners">Партнери</a>
+          </li>
+          <li>
+            <a href="#about_us">Про Нас</a>
+          </li>
+          <li>
+            <a href="#contact_us">Контакти</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+
+    <!--Scripts-->
+    <script src="./js/index.js"></script>
+    <!--Scripts-->
+
+
+  </body>
+</html>
